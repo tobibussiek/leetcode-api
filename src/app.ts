@@ -18,6 +18,7 @@ import {
 } from './GQLQueries/newQueries';
 
 const app = express();
+app.set('trust proxy', true);
 let cache = apicache.middleware;
 const API_URL = process.env.LEETCODE_API_URL || 'https://leetcode.com/graphql';
 
